@@ -9,16 +9,23 @@ body {
     padding: 0;
 }
 
+.group-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
 #contact_us {
     background-image: url(img/contact_us.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     font-family: 'Roboto', sans-serif;
     display: flex;
-    justify-content: flex-start;
     align-items: center;
-    height: 91vh;
-
+    width: 100%;
+    border: 1px solid black;
+    height: calc(100vh - 100px);
     padding-top: 100px;
 }
 
@@ -74,16 +81,85 @@ input[type="submit"]:hover {
     text-align: center;
 }
 
-@media only screen and (max-width: 800px) {
+
+@media only screen and (max-width: 1400px) {
     
     #contact_us {
-        height: auto;
+        width: 100%;
         justify-content: center;
     }
 
     .formulario {
-        margin: 0;
-        width: 50%;
-        margin-top: 25%; 
+        width: 40%;
+        margin-left: 0;
+        height: 400px;
     }
+
+    input[type="text"], input[type="email"], textarea {
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        height: 30px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    
+    #contact_us {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .formulario {
+        width: 50%;
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    
+    #contact_us {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .formulario {
+        width: 60%;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .formulario {
+        width: 80%;
+        height: 400px;
+    }
+
+    input[type="text"], input[type="email"], textarea {
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        height: 30px;
+    }
+
+    
+}
+
+@media (max-width: 300px) {
+
+    .formulario {
+        width: 80%;
+        height: 400px;
+        margin-bottom: 20px;
+    }
+
+    input[type="text"], input[type="email"], textarea {
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        height: 30px;
+    }
+
+    
 }
