@@ -143,6 +143,16 @@ footer {
     color: #FFFFFF;
 }
 
+.btn-app {
+    color: #FFFFFF;
+    background-color: #1663c9;
+    outline-color: #033f8d;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
 
 @media screen and (max-width: 1400px) {
     #menu-icon {
