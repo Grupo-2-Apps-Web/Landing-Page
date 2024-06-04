@@ -154,7 +154,8 @@ footer {
 }
 
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1400px) { 
+    
     #menu-icon {
         display: block;
     }
@@ -204,4 +205,15 @@ footer {
         margin: 0px 30px;
     }
     
+}
+
+@media screen and (max-width: 410px) {
+    header {
+        display: flex;
+        flex-direction: column; 
+    }
+    .demo-button {
+        margin: 15px 0;
+    }
+ 
 }
