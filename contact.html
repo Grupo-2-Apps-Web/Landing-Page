@@ -3,81 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CargoWatch</title>
-    <link rel="stylesheet" href="contact.css">
+    <meta name="author" content="CargoWatch">
+    <meta name="robots" content="index, follow"> 
+    <title>CargoApp</title>
+    <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="img/logo.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Rubik:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="contact.css">
+    <!-- Icon -->
+    <link rel="icon" href="img/icon.png" type="image/x-icon">
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!--Recursos de boxicons-->
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 </head>
 <body>
-    <header>
+    <header class="header">
         <a href="index.html" class="logo">
-            <img src="img/logo.png" alt="icon-CargoWatch">
-            <span id = "logo-text">CargoWatch</span>
+            <img src="img/icon.png" alt="icon-cargoWatch">
+            <span>CargoApp</span>
         </a>
 
         <ul class="navbar">
             <li><a href="index.html" class="btn-nav">Home</a></li>
-            <li><a href="about-app.html" class="btn-nav">About app</a></li>
-            <li><a href="about-us.html" class="btn-nav">About us</a></li>
+            <li><a href="about-app.html" class="btn-nav">Problematic</a></li>
             <li><a href="features.html" class="btn-nav">Features</a></li>
+            <li><a href="about-us.html" class="btn-nav">About Us</a></li>
             <li><a href="contact.html" class="btn-nav">Contact</a></li>
         </ul>
 
-        <div class="demo-button">
-            <a href="https://cargoapp-demo.web.app">
-            <button class="btn-app">Login</button>
-            </a>
-        </div>
-
         <div class="menu">
+            <a href="https://cargoapp-demo.web.app" class="usser">Login</a>
+            <a href="https://cargoapp-demo.web.app">Sign up</a>
             <div class="bx bx-menu" id="menu-icon"></div>
         </div>
     </header>
 
-    <main class="group-contact">
-        
-        <div id = "contact_us">
-            <div class="formulario">
-
-                <div id="title-contact_us">
-                    <h1>Contact Us</h1>
-                </div>
-                
-                <form action="#" method="post">
-                    <label for="nombre">Name:</label>
-                    <input type="text" id="nombre" name="nombre" required>
-            
-                    <label for="apellidos">Last Name:</label>
-                    <input type="text" id="apellidos" name="apellidos" required>
-            
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                    
-                    <label for="mensaje">Message:</label>
-                    <textarea id="mensaje" name="mensaje" required></textarea>
-                    <div id="button">
-                        <input type="submit" value="Send">
+    <main>
+        <div id="formulario">   
+            <form>
+                <h1> Contact us </h1>
+                <div id="nombre-completo">
+                    <div class="nombre">
+                        <label for="formNombre">Name: </label><br>
+                        <input type="text" id="formNombre" placeholder="Enter your name"><br>
                     </div>
-                    
-                </form>
-            </div>
+                   <div class="apellidos">
+                        <label for="formApellidos">Last name: </label><br>
+                        <input type="text" id="formNombre" placeholder="Enter your last name"><br>
+                   </div>
+                </div>
+                <label for="formCorreo">Email: </label><br>
+                <input type="text" id="formCorreo" placeholder="Enter your email" required><br>
+                <label for="formMensaje">Message: </label><br>
+                <textarea id="formMensaje" cols="55" rows="10" placeholder="Enter your message" required></textarea>
+                <div id="botonForm">
+                    <input type="submit" value="Send">
+                </div>
+            </form>
         </div>
-
     </main>
-
+        
     <footer>
-        <h4 class="footer-text">CargoWatch - comprehensive solutions</h4> 
+        <h4 class="footer-text">CargoWatch - innovative solutions</h4> 
         <ul class="social-icons">
-            <li> <a href="#" class="fb"><img src="img/facebook.png" class="social" alt="fb"></a></li>
-            <li> <a href="#" class="ins"><img src="img/instagram.png" class="social" alt="ins"></a></li>
-            <li> <a href="#" class="tw"><img src="img/x.png" class="social" alt="tw"></a></li>
-            <li> <a href="#" class="tk"><img src="img/tiktok.png" class="social" alt="tiktok"></a></li>
+            <li> <a href="#" class="fb"><img src="img/facebook.png" alt="fb"></a></li>
+            <li> <a href="#" class="ins"><img src="img/instagram.png" alt="ins"></a></li>
+            <li> <a href="#" class="tw"><img src="img/x.png" alt="tw"></a></li>
+            <li> <a href="#" class="tw"><img src="img/tiktok.png" alt="tw"></a></li>
         </ul> 
         <h4 class="footer-credits">© CargoWatch 2024 (Web Applications UPC)</h4> 
     </footer>
+    <!--Script-->
     <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
