@@ -1,10 +1,36 @@
 *{
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
     text-decoration: none;
+    user-select: none;
 }
 
+img{
+    user-select: none;
+}
+
+:root{
+    --primary-color: #1E3A8A;
+    --secondary-color: #364d9b;
+    --secondary-color-second: #FFA500;
+    --success-color: #27AE60;
+    --error-color: #F84343;
+    --text-color: #062D3E;
+    --text-primary-color: #ffffff;
+    --text-secundary-color: #FFA500;
+}
+
+body{
+    font-family: 'Inter', sans-serif; 
+    min-height: 100vh;
+    background-color:var(--secondary-color-second);
+    color: color(--secondary-color);
+    position:relative;
+}
+
+
+/**header css**/
 header{
     position: fixed;
     width: 100%;
@@ -14,16 +40,10 @@ header{
     align-items: center;
     justify-content: space-between;
     background: transparent;
-    padding: 14px 2%;
-    background-color: #1E3A8A;
-    
-    font-family: Roboto, sans-serif;
+    padding: 10px 12%;
     transition: all .50s ease;
-}
-
-body{
-    min-height: 100vh;
-    position:relative;
+    background-color:var(--secondary-color);
+    box-shadow: 0 0 5px #EBE3CC;
 }
 
 .logo{
@@ -34,15 +54,15 @@ body{
 .logo img{
     width: 70px;
     height: 70px;
-
+    border-radius: 50%; 
+    object-fit: cover; 
     margin-right: 5%;
 }
 
-#logo-text{
-    color: white;
-    font-size: 20px;
+.logo span{
+    color: var(--text-primary-color);
+    font-size: 1.1rem;
     font-weight: bold;
-    
 }
 
 .navbar{
@@ -51,24 +71,25 @@ body{
 }
 
 .navbar a{
-    color: white;
-    font-size: 20px;
+    color: var(--text-primary-color);
+    font-size: 1.1rem;
     font-weight: 500;
     padding: 5px 0;
     margin: 0px 30px;
     transition: all .50s ease;
 }
 
+.navbar a[href="#home"] {
+    color: var(--text-secundary-color);
+    font-weight: bold;
+}
+
 .navbar a:hover{
-    color: #FFA500;
+    color: var(--text-secundary-color);
 }
 
 .navbar .nav-active{
-    color: #FFA500;
-}
-
-main{
-    padding-bottom: 5rem;
+    color: var(--text-secundary-color);
 }
 
 /*displayable menu*/
@@ -93,38 +114,84 @@ main{
     padding: 10px;
 }
 
+.usser{
+    background: #FFA500;
+}
+
 .menu a:hover{
-    background-color: #d66e6c;
-    box-shadow: 0px 0px 10px #d66e6c;
+    background-color: #257CEC;
+    box-shadow: 0px 0px 10px #257CEC;
+}
+
+.menu .usser:hover{
+    background-color: var(--secondary-color-second);
 }
 
 #menu-icon{
-    z-index: 10001;
     font-size: 35px;
-    color: #FFFFFF;
+    color: #ffffff;
     cursor: pointer;
+    z-index: 10001;
     display: none;
 }
 
+/*main section of the page*/
 
+main{
+    padding: 7rem 1rem;
+}
+
+/*section home--------------------------------*/
+.home-section {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(5, 7, 12, 0.5), rgba(5, 7, 12, 0.5)), url("img/fondo-home.jpeg") no-repeat center fixed;
+    background-size: cover;
+    text-align: center;
+}
+
+.home-text {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-text h1 {
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--text-primary-color);
+    text-shadow: 2px 2px 4px rgba(150, 150, 150, 0.5);
+}
+
+.home-text .yellow-text {
+    color: var(--secondary-color-second);
+}
+
+
+/*footer section----------------------------*/
 footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: #1E3A8A;
+    background-color: var(--secondary-color);
     min-height: 100px;
     align-items: center;
     justify-content: space-around;
     display: flex;
     flex-direction: row;
+    transition: all 0.5s ease;
 }
 
 .social-icons{
     display:flex;
-}
-
-.social{
-    height: 40px;
 }
 
 .social-icons li{
@@ -132,88 +199,92 @@ footer {
     padding: 5%;
 }
 
+.social-icons img{
+    width: 35px;
+    height: 35px;
+}
+
 .footer-text{
-    color: #FFFFFF;
-    font-family: Roboto, sans-serif;
+    color: var(--text-primary-color);
     font-style: italic;
 }
 
 .footer-credits{
-    font-family: Roboto, sans-serif;
-    color: #FFFFFF;
+    color: var(--text-primary-color);
 }
 
-.btn-app {
-    color: #FFFFFF;
-    background-color: #1663c9;
-    outline-color: #033f8d;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 10px 20px;
-    border-radius: 10px;
+/*responsive*/
+@media (max-width: 1750px) {
+    header{
+        padding: 14px 2%;
+        transition: .2s;
+    }
+    footer {
+        bottom: 0; /* Asegura que el pie de página permanezca en la parte inferior */
+    }
 }
 
-
-@media screen and (max-width: 1400px) { 
-    
-    #menu-icon {
+@media (max-width: 1482px){
+    #menu-icon{
         display: block;
     }
-
-    .navbar {
+    .navbar{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 270px;
+        height: 39vh;
+        background: #FFFFFF;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        padding-top: 20px;
-        border-radius: 5px;
-
-        position: absolute;
-        top: 90px;
-        right: -100%;
-        width: 200px;
-        height: 200px;
-
-        background-color: #FFFFFF;
-
+        border-radius: 10px;
         transition: all .50s ease;
     }
+
     .navbar a{
-        color: black;
-        line-height: 1.5;
+        display: block;
+        margin: 12px 0;
+        padding: 0px 25px;
+        transition: all .50s ease;
+        color: var(--accent-color);
+        
     }
 
     .navbar a:hover{
-        color: #FFA500;
+        color: var(--secondary-color);
         transform: translateY(5px);
     }
 
+    .navbar a.active{
+        color: var(--primary-color);
+
+    }
+
     .navbar.open{
-        top: 90px;
         right: 2%;
     }
 
-}   
-
-@media screen and (max-width: 950px){
-    footer{
-        flex-direction: column;
-    }   
-}
-
-@media screen and (max-width: 650px) {
     .menu a{
-        margin: 0px 30px;
+        padding: 5px;
     }
-    
 }
 
-@media screen and (max-width: 410px) {
-    header {
+@media(max-width: 1082px){
+    footer{
         display: flex;
-        flex-direction: column; 
+        transition: flex-direction 0.5s ease;
+        flex-direction: column;
     }
-    .demo-button {
-        margin: 15px 0;
+}
+
+@media (max-width: 742px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
     }
- 
+
+    .menu a {
+        margin: 5px 0;
+    }
 }

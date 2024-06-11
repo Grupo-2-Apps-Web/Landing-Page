@@ -34,7 +34,7 @@ sectionBtn[3].onclick = function(){
     this.classList.add("nav-active");
 }
 
-//reseÃ±as
+//reseñas
 var btn = document.getElementsByClassName("btn");
 var slide = document.getElementById("slide");
 
